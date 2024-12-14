@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".ui.DetailsFigureActivity">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageViewStore"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollViewDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/imageViewStore"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewStoreName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombre Figura"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:padding="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewOrigen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Origen"
+                android:drawableStart="@drawable/baseline_error_24"
+                android:drawablePadding="10dp"
+                android:textSize="18sp"
+                android:padding="10dp"
+                app:layout_constraintTop_toBottomOf="@id/textViewStoreName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewStorePelicula"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pelicula"
+                android:drawableStart="@drawable/baseline_error_24"
+                android:drawablePadding="10dp"
+                android:textSize="18sp"
+                android:padding="10dp"
+                app:layout_constraintTop_toBottomOf="@id/textViewOrigen"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewStoreHistory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Historia"
+                android:textSize="18sp"
+                android:padding="10dp"
+                app:layout_constraintTop_toBottomOf="@id/textViewStorePelicula"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewStorePrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Precio"
+                android:textSize="18sp"
+                android:padding="10dp"
+                app:layout_constraintTop_toBottomOf="@id/textViewStoreHistory"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
